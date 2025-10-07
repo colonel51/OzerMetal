@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Özer Metal - Ana Sayfa{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background-image: url('{% static 'images/hero-metal.jpg' %}');">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="row justify-content-center align-items-center min-vh-100">
+                <div class="col-lg-8 text-center">
+                    <div class="hero-content">
+                        <h1 class="display-1 fw-bold text-white mb-4 lh-1">
+                            Profesyonel Hurda Alım Satım ve <span class="text-primary">Metal Geri Dönüşüm</span>
+                        </h1>
+                        <p class="lead text-white mb-4 fs-5">
+                            15 yıllık deneyimimizle en iyi fiyatlarla hurda alım satımı yapıyor, 
+                            çevreye saygılı geri dönüşüm çözümleri sunuyoruz.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-phone me-2"></i>
+                                Hemen Ara
+                            </a>
+                            <a href="https://wa.me/905343974262?text=Merhaba%20%C3%96zer%20Metal,%20hurda%20de%C4%9Ferlendirmesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp btn-lg me-3" target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                WhatsApp
+                            </a>
+                            <a href="#services" class="btn btn-outline-light btn-lg mt-2">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Hizmetlerimiz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="feature-card text-center p-4">
+                    <div class="text-primary fs-1 mb-3">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h5 class="mb-3">En İyi Fiyat</h5>
+                    <p class="text-muted">Güncel piyasa fiyatlarıyla en yüksek değerlendirme garantisi</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="feature-card text-center p-4">
+                    <div class="text-primary fs-1 mb-3">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h5 class="mb-3">Hızlı Hizmet</h5>
+                    <p class="text-muted">Aynı gün değerlendirme ve ödeme imkanı</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="feature-card text-center p-4">
+                    <div class="text-primary fs-1 mb-3">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h5 class="mb-3">Çevre Dostu</h5>
+                    <p class="text-muted">%100 çevreye saygılı geri dönüşüm süreçleri</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="feature-card text-center p-4">
+                    <div class="text-primary fs-1 mb-3">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h5 class="mb-3">Ücretsiz Nakliye</h5>
+                    <p class="text-muted">Büyük miktarlarda ücretsiz araç gönderimi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold">Hizmetlerimiz</h2>
+                <p class="section-subtitle text-muted">
+                    Geniş hizmet yelpazemizle tüm hurda ve metal ihtiyaçlarınıza çözüm sunuyoruz
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4 class="h4 fw-semibold mb-3">Hurda Alım Satım</h4>
+                        <p class="text-muted mb-3">
+                            Demir, çelik, bakır, alüminyum, pirinç ve diğer metallerin 
+                            en iyi fiyatlarla alımını gerçekleştiriyoruz.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Demir ve çelik hurda</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Bakır ve bakır alaşımları</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Alüminyum ve profiller</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Pirinç ve bronz</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4 class="mb-3">Endüstriyel Atık Yönetimi</h4>
+                        <p class="text-muted mb-3">
+                            Fabrikalar ve endüstriyel tesisler için özel atık yönetimi 
+                            ve geri dönüşüm çözümleri.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Metal işleme atıkları</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Makine parçaları</li>
+                            <li><i class="fas fa-check text-success me-2"></i>İnşaat demiri</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Özel proje çözümleri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4 class="mb-3">Yıkım ve Söküm</h4>
+                        <p class="text-muted mb-3">
+                            Profesyonel ekibimizle güvenli yıkım ve söküm işlemleri, 
+                            kullanılabilir malzemelerin ayrıştırılması.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Bina yıkımları</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Makine sökümü</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Tesis tasfiyesi</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Güvenli temizlik</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                <div class="service-card h-100">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4 class="mb-3">Uzun Vadeli Anlaşmalar</h4>
+                        <p class="text-muted mb-3">
+                            Büyük firmalar için özel fiyatlandırma ve uzun vadeli 
+                            işbirliği anlaşmaları.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Özel fiyat listeleri</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Düzenli toplama servisi</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Raporlama hizmetleri</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Danışmanlık desteği</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <h3 class="display-4 fw-bold">15+</h3>
+                    <p class="mb-0">Yıllık Deneyim</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <h3 class="display-4 fw-bold">1000+</h3>
+                    <p class="mb-0">Mutlu Müşteri</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <h3 class="display-4 fw-bold">50K+</h3>
+                    <p class="mb-0">Ton Geri Dönüştürülen Metal</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="stat-item">
+                    <h3 class="display-4 fw-bold">24/7</h3>
+                    <p class="mb-0">Hizmet Desteği</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h3 class="mb-3">Hurda Değerlendirmeniz İçin Hemen Arayın!</h3>
+                <p class="text-muted mb-0">
+                    Profesyonel ekibimiz sizin için en iyi fiyatı belirleyecek ve aynı gün ödeme yapacaktır.
+                </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg mb-2 me-2">
+                    <i class="fas fa-phone me-2"></i>
+                    Hemen Ara
+                </a>
+                <a href="https://wa.me/905343974262?text=Merhaba%20%C3%96zer%20Metal,%20hurda%20de%C4%9Ferlendirmesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp btn-lg mb-2" target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

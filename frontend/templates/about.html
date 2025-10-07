@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hakkımızda - Özer Metal{% endblock %}
+
+{% block description %}Özer Metal hakkında bilgi edinin. 15 yıllık deneyimimiz ve çevreye saygılı hurda geri dönüşüm hizmetlerimizi keşfedin.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-3 fw-bold">Hakkımızda</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Ana Sayfa</a></li>
+                        <li class="breadcrumb-item active">Hakkımızda</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="{% static 'images/about-company.jpg' %}" alt="Özer Metal Hakkında" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2 class="display-6 fw-bold mb-4">15 Yıllık Deneyim ile Güvenilir Hizmet</h2>
+                    <p class="lead text-muted mb-4">
+                        Özer Metal olarak 2009 yılından beri hurda metal alım satımı ve geri dönüşüm 
+                        sektöründe faaliyet göstermekteyiz. Müşteri memnuniyeti odaklı yaklaşımımız 
+                        ve çevreye saygılı hizmet anlayışımızla sektörde öncü konumdayız.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <span>15 yıllık sektör deneyimi</span>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <span>ISO 14001 çevre yönetim sertifikası</span>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <span>1000+ mutlu müşteri</span>
+                        </div>
+                        <div class="feature-item d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <span>7/24 müşteri desteği</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="mission-vision py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="mission-card h-100 p-4 bg-white rounded shadow-sm">
+                    <div class="card-icon mb-3">
+                        <i class="fas fa-bullseye text-primary"></i>
+                    </div>
+                    <h3 class="mb-3">Misyonumuz</h3>
+                    <p class="text-muted">
+                        Çevreye saygılı yaklaşımımızla hurda metal geri dönüşümünde lider olmak, 
+                        müşterilerimize en iyi fiyat ve hizmet kalitesini sunarak doğal kaynakların 
+                        korunmasına katkıda bulunmak.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="vision-card h-100 p-4 bg-white rounded shadow-sm">
+                    <div class="card-icon mb-3">
+                        <i class="fas fa-eye text-primary"></i>
+                    </div>
+                    <h3 class="mb-3">Vizyonumuz</h3>
+                    <p class="text-muted">
+                        Sürdürülebilir çevre anlayışı ile gelecek nesillere yaşanabilir bir dünya bırakmak, 
+                        metal geri dönüşüm sektöründe teknoloji ve hizmet kalitesiyle örnek olmak.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Değerlerimiz</h2>
+                <p class="section-subtitle text-muted">
+                    İş süreçlerimizde ve müşteri ilişkilerimizde rehber aldığımız temel değerler
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="value-card text-center">
+                    <div class="text-primary fs-1 mb-3">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h5 class="mb-3">Güvenilirlik</h5>
+                    <p class="text-muted">
+                        Sözümüzün eri olan, güvenilir ve şeffaf iş anlayışı
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="value-card text-center">
+                    <div class="text-primary fs-1 mb-3">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h5 class="mb-3">Çevre Bilinci</h5>
+                    <p class="text-muted">
+                        Doğayı korumaya odaklı, sürdürülebilir çözümler
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="value-card text-center">
+                    <div class="text-primary fs-1 mb-3">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="mb-3">Kalite</h5>
+                    <p class="text-muted">
+                        Hizmet kalitesinde asla ödün vermez, sürekli gelişimi hedefleriz
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="value-card text-center">
+                    <div class="text-primary fs-1 mb-3">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5 class="mb-3">Müşteri Odaklılık</h5>
+                    <p class="text-muted">
+                        Müşteri memnuniyetini ön planda tutan, esnek çözümler
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% comment %} <!-- Team Section -->
+<section class="team-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Ekibimiz</h2>
+                <p class="section-subtitle text-muted">
+                    Deneyimli ve uzman kadromuzla sizlere en iyi hizmeti sunuyoruz
+                </p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-card text-center bg-white p-4 rounded shadow-sm">
+                    <div class="team-image mb-3">
+                        <img src="{% static 'images/team-ceo.jpg' %}" alt="CEO" class="img-fluid rounded-circle">
+                    </div>
+                    <h5 class="mb-2">Mehmet Özer</h5>
+                    <p class="text-primary mb-2">Genel Müdür</p>
+                    <p class="text-muted small">
+                        20 yıllık sektör deneyimi ile şirketin vizyonunu belirleyen lider
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-card text-center bg-white p-4 rounded shadow-sm">
+                    <div class="team-image mb-3">
+                        <img src="{% static 'images/team-operations.jpg' %}" alt="Operasyon Müdürü" class="img-fluid rounded-circle">
+                    </div>
+                    <h5 class="mb-2">Ali Kaya</h5>
+                    <p class="text-primary mb-2">Operasyon Müdürü</p>
+                    <p class="text-muted small">
+                        Günlük operasyonları yöneten, sahada 15 yıllık deneyime sahip uzman
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="team-card text-center bg-white p-4 rounded shadow-sm">
+                    <div class="team-image mb-3">
+                        <img src="{% static 'images/team-sales.jpg' %}" alt="Satış Müdürü" class="img-fluid rounded-circle">
+                    </div>
+                    <h5 class="mb-2">Fatma Demir</h5>
+                    <p class="text-primary mb-2">Satış Müdürü</p>
+                    <p class="text-muted small">
+                        Müşteri ilişkileri ve satış süreçlerinde uzman, çözüm odaklı yaklaşım
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+<!-- Certificates Section -->
+<section class="certificates-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Sertifikalarımız</h2>
+                <p class="section-subtitle text-muted">
+                    Kalite ve çevre standartlarına uygunluğumuzu belgeleyen sertifikalarımız
+                </p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-6 mb-4">
+                <div class="certificate-card text-center p-3">
+                    <i class="fas fa-certificate text-success mb-3"></i>
+                    <h6 class="mb-2">ISO 14001</h6>
+                    <p class="text-muted small">Çevre Yönetim Sistemi</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-6 mb-4">
+                <div class="certificate-card text-center p-3">
+                    <i class="fas fa-certificate text-success mb-3"></i>
+                    <h6 class="mb-2">ISO 9001</h6>
+                    <p class="text-muted small">Kalite Yönetim Sistemi</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-6 mb-4">
+                <div class="certificate-card text-center p-3">
+                    <i class="fas fa-certificate text-success mb-3"></i>
+                    <h6 class="mb-2">Çevre Lisansı</h6>
+                    <p class="text-muted small">Atık Toplama ve Geri Dönüşüm</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-6 mb-4">
+                <div class="certificate-card text-center p-3">
+                    <i class="fas fa-certificate text-success mb-3"></i>
+                    <h6 class="mb-2">Ticaret Odası</h6>
+                    <p class="text-muted small">Resmi Üyelik Belgesi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

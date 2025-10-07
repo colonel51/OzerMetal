@@ -1,0 +1,357 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}İletişim - Özer Metal{% endblock %}
+
+{% block description %}Özer Metal ile iletişime geçin. Hurda değerlendirme, fiyat teklifi ve tüm sorularınız için bize ulaşın.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-3 fw-bold">İletişim</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Ana Sayfa</a></li>
+                        <li class="breadcrumb-item active">İletişim</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Bizimle İletişime Geçin</h2>
+                <p class="section-subtitle text-muted">
+                    Hurda değerlendirme, fiyat teklifi ve tüm sorularınız için bize ulaşın
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-lg-4 mb-5">
+                <div class="contact-info">
+                    <div class="contact-item mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5 class="mb-2">Adresimiz</h5>
+                            <p class="text-muted mb-0">
+                                {{ BUSINESS_INFO.address.0|default:"Sanayi Mahallesi, Hurda Sokak No:15" }}<br>
+                                {{ BUSINESS_INFO.address.1|default:"34000 İstanbul, Türkiye" }}
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5 class="mb-2">Telefon</h5>
+                            <p class="text-muted mb-1">
+                                <a href="tel:{{ BUSINESS_INFO.phone.0|default:'+905343974262' }}" class="text-decoration-none">
+                                    {{ BUSINESS_INFO.phone.0|default:"+90 534 397 42 62" }}
+                                </a>
+                            </p>
+                            {% if BUSINESS_INFO.phone.1 %}
+                            <p class="text-muted mb-0">
+                                <a href="tel:{{ BUSINESS_INFO.phone.1 }}" class="text-decoration-none">
+                                    {{ BUSINESS_INFO.phone.1 }}
+                                </a>
+                            </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5 class="mb-2">E-posta</h5>
+                            <p class="text-muted mb-1">
+                                <a href="mailto:{{ BUSINESS_INFO.email.0|default:'info@ozermetal.com' }}" class="text-decoration-none">
+                                    {{ BUSINESS_INFO.email.0|default:"info@ozermetal.com" }}
+                                </a>
+                            </p>
+                            {% if BUSINESS_INFO.email.1 %}
+                            <p class="text-muted mb-0">
+                                <a href="mailto:{{ BUSINESS_INFO.email.1 }}" class="text-decoration-none">
+                                    {{ BUSINESS_INFO.email.1 }}
+                                </a>
+                            </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5 class="mb-2">Çalışma Saatleri</h5>
+                            <p class="text-muted mb-1">
+                                {{ BUSINESS_INFO.working_hours.0|default:"Pazartesi - Cuma: 08:00 - 18:00" }}
+                            </p>
+                            <p class="text-muted mb-1">
+                                {{ BUSINESS_INFO.working_hours.1|default:"Cumartesi: 08:00 - 14:00" }}
+                            </p>
+                            <p class="text-muted mb-0">Pazar: Kapalı</p>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp Contact -->
+                    <div class="contact-item mb-4 whatsapp-contact">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h5 class="mb-2">WhatsApp İletişim</h5>
+                            <p class="text-muted mb-2">
+                                Hızlı fiyat teklifi ve anında destek için WhatsApp'tan yazın
+                            </p>
+                            <a href="https://wa.me/905343974262?text=Merhaba%20%C3%96zer%20Metal,%20hurda%20de%C4%9Ferlendirmesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+                               class="btn btn-success btn-sm" 
+                               target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                WhatsApp'tan Yaz
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Emergency Contact -->
+                    <div class="emergency-contact bg-danger text-white p-3 rounded">
+                        <h6 class="mb-2">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Acil Durum
+                        </h6>
+                        <p class="mb-0 small">
+                            Acil hurda toplama ve değerlendirme için<br>
+                            <strong>7/24 ulaşabilirsiniz:</strong><br>
+                            <a href="tel:+905343974262" class="text-white">+90 534 397 42 62</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <strong>Hızlı Fiyat Teklifi:</strong> Hurda türü ve miktarını belirterek size özel fiyat teklifi alabilirsiniz.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="contactForm" class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">Adınız *</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Soyadınız *</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label">Telefon *</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">E-posta</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="scrapType" class="form-label">Hurda Türü</label>
+                            <select class="form-select" id="scrapType" name="scrapType">
+                                <option value="">Seçiniz...</option>
+                                <option value="demir">Demir - Çelik</option>
+                                <option value="bakir">Bakır</option>
+                                <option value="aluminyum">Alüminyum</option>
+                                <option value="pirinc">Pirinç</option>
+                                <option value="bronz">Bronz</option>
+                                <option value="karisik">Karışık Metal</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="quantity" class="form-label">Tahmini Miktar (kg)</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" min="1">
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <label for="address" class="form-label">Adres</label>
+                            <textarea class="form-control" id="address" name="address" rows="2" placeholder="Hurda toplama adresi (opsiyonel)"></textarea>
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <label for="message" class="form-label">Mesajınız *</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Hurda detayları, özel istekleriniz veya sorularınızı buraya yazabilirsiniz..."></textarea>
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                                <label class="form-check-label" for="consent">
+                                    <small>Kişisel verilerimin işlenmesine ve tarafımla iletişim kurulmasına onay veriyorum. *</small>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i>
+                                Mesaj Gönder
+                            </button>
+                            <button type="button" class="btn btn-success btn-lg ms-2" onclick="window.open('tel:+905343974262')">
+                                <i class="fas fa-phone me-2"></i>
+                                Hemen Ara
+                            </button>
+                            <button type="button" class="btn btn-whatsapp btn-lg ms-2" onclick="window.open('https://wa.me/905343974262?text=Merhaba%20%C3%96zer%20Metal,%20hurda%20de%C4%9Ferlendirmesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.', '_blank')">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h3 class="mb-3">Bizi Ziyaret Edin</h3>
+                <p class="text-muted">Hurda değerlendirmesi için doğrudan tesisimize gelebilirsiniz</p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <!-- Google Maps Embed - Bu kısmı gerçek adresinizle güncelleyin -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.665640346782!2d32.75835321501347!3d40.016120749685274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34a528e44688f%3A0xeeeff081b626244b!2zSsO8ZGlra8O2LCBIeXJkYcW8sIFNpdGVzaSwgMDYzNzggWWVuaW1haGFsbGUvQW5rYXJhLCBUw7xya2l5ZQ!5e0!3m2!1str!2str!4v1696600000000!5m2!1str!2str"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h3 class="section-title">Sık Sorulan Sorular</h3>
+                <p class="section-subtitle text-muted">
+                    En çok merak edilen sorular ve cevapları
+                </p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Hurda fiyatları nasıl belirleniyor?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Hurda fiyatları günlük piyasa değerlerine, metal türüne, kalitesine ve miktarına göre belirlenir. 
+                                En güncel fiyatlar için bizi arayabilir veya tesisimize gelerek değerlendirme yaptırabilirsiniz.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Evden hurda topluyор musunuz?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Evet, belirli miktar ve türdeki hurdalar için ücretsiz araç gönderimi yapıyoruz. 
+                                Minimum miktar şartları için bizi arayarak bilgi alabilirsiniz.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Ödeme nasıl yapılıyor?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Ödemelerimizi nakit, havale/EFT veya çek ile aynı gün içinde gerçekleştiriyoruz. 
+                                Büyük miktarlar için özel ödeme koşulları da sunuyoruz.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Hangi metal türlerini alıyorsunuz?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Demir, çelik, bakır, alüminyum, pirinç, bronz, çinko ve diğer tüm metal türlerini alıyoruz. 
+                                Karışık metaller de kabul edilir. Detaylı liste için bizi arayabilirsiniz.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Form validation ve gönderme işlemi burada yapılacak
+    alert('Mesajınız alındı! En kısa sürede size dönüş yapacağız.');
+    
+    // Form reset
+    this.reset();
+});
+</script>
+{% endblock %}

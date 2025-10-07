@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Özer Metal - Hurdacı ve Metal Geri Dönüşüm{% endblock %}</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{% block description %}Özer Metal - Profesyonel hurda alım satım ve metal geri dönüşüm hizmetleri. En iyi fiyatlarla hurda değerlendirme.{% endblock %}">
+    <meta name="keywords" content="hurda, metal, geri dönüşüm, hurdacı, demir, bakır, alüminyum">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="{% url 'home' %}">
+                <i class="fas fa-recycle me-2"></i>
+                Özer Metal
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'home' %}#services">Hurda Alım</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}#services">Metal Geri Dönüşüm</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}#services">Endüstriyel Atık</a></li>
+                            <li><a class="dropdown-item" href="{% url 'home' %}#services">Proje Bazlı Çözümler</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link whatsapp-nav" href="https://wa.me/{{ BUSINESS_INFO.whatsapp|default:'905343974262' }}?text=Merhaba%20%C3%96zer%20Metal,%20hurda%20de%C4%9Ferlendirmesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank">
+                            <i class="fab fa-whatsapp me-1"></i>
+                            WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="fas fa-recycle me-2"></i>
+                        Özer Metal
+                    </h5>
+                    <p class="text-light bg-dark">
+                        Profesyonel hurda alım satım ve metal geri dönüşüm hizmetleri ile 
+                        çevreye saygılı çözümler sunuyoruz.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://wa.me/{{ BUSINESS_INFO.whatsapp|default:'905343974262' }}?text=Merhaba%20%C3%96zer%20Metal,%20hurda%20de%C4%9Ferlendirmesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." class="text-light me-3" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mb-4">
+                    <h6 class="mb-3">Hızlı Linkler</h6>
+                    <ul class="list-unstyled ">
+                        <li><a href="{% url 'home' %}" class="text-light bg-dark text-decoration-none">Ana Sayfa</a></li>
+                        <li><a href="{% url 'about' %}" class="text-light bg-dark text-decoration-none">Hakkımızda</a></li>
+                        <li><a href="#services" class="text-light bg-dark text-decoration-none">Hizmetlerimiz</a></li>
+                        <li><a href="{% url 'contact' %}" class="text-light bg-dark text-decoration-none">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">Hizmetlerimiz</h6>
+                    <ul class="list-unstyled">
+                        <li class="text-light bg-dark">Hurda Alım Satım</li>
+                        <li class="text-light bg-dark">Metal Geri Dönüşüm</li>
+                        <li class="text-light bg-dark">Endüstriyel Atık Yönetimi</li>
+                        <li class="text-light bg-dark">Proje Bazlı Çözümler</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">İletişim Bilgileri</h6>
+                    <div class="contact-info">
+                        <p class="text-light bg-dark mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            {{ BUSINESS_INFO.address.0|default:"Adres bilgisi" }}
+                        </p>
+                        <p class="text-light bg-dark mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            {{ BUSINESS_INFO.phone.0|default:"+90 XXX XXX XX XX" }}
+                        </p>
+                        <p class="text-light bg-dark mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            {{ BUSINESS_INFO.email.0|default:"info@ozermetal.com" }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-light bg-dark mb-0">
+                        © 2024 Özer Metal. Tüm hakları saklıdır.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-light bg-dark mb-0">
+                        Geri dönüşümle geleceği koruyoruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary btn-floating">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/{{ BUSINESS_INFO.whatsapp|default:'905343974262' }}?text=Merhaba%20%C3%96zer%20Metal,%20hurda%20de%C4%9Ferlendirmesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+       class="whatsapp-float" 
+       target="_blank"
+       title="WhatsApp ile iletişime geç">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

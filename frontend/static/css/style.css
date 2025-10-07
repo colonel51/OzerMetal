@@ -1,0 +1,660 @@
+/* =================================================================
+   Özer Metal - Hurda Sitesi CSS
+   Modern ve responsive tasarım
+================================================================= */
+
+:root {
+    --primary-color: #2c5530;
+    --secondary-color: #3d7c47;
+    --accent-color: #52a85b;
+    --dark-color: #1a3220;
+    --light-color: #f8f9fa;
+    --text-dark: #2d3436;
+    --text-muted: #636e72;
+    --border-color: #ddd;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --gradient-primary: linear-gradient(135deg, #2c5530 0%, #3d7c47 100%);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fff;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-dark);
+}
+
+/* Section title artık Bootstrap display classes ile yönetiliyor */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.navbar {
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    background: rgba(26, 50, 32, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 76px;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(44, 85, 48, 0.8), rgba(61, 124, 71, 0.7));
+    z-index: 1;
+}   
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero h1 artık Bootstrap utility classes ile yönetiliyor */
+
+/* Hero lead artık Bootstrap utility classes ile yönetiliyor */
+
+.hero-buttons .btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-image img {
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Features Section */
+.features-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* Feature icons artık Bootstrap fs-1 ile yönetiliyor */
+
+/* Services Section */
+.services-section {
+    padding: 5rem 0;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-content ul li {
+    padding: 0.25rem 0;
+}
+
+/* Stats Section */
+.stats-section {
+    background: var(--gradient-primary);
+    padding: 4rem 0;
+}
+
+/* Stat items artık Bootstrap display classes ile yönetiliyor */
+
+/* CTA Section */
+.cta-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+/* Page Header */
+.page-header {
+    background: var(--gradient-primary);
+    padding: 8rem 0 4rem;
+    color: white;
+    text-align: center;
+}
+
+/* .page-title sınıfı artık Bootstrap utility classes ile değiştirildi */
+
+.breadcrumb {
+    background: transparent;
+    margin-bottom: 0;
+}
+
+.breadcrumb-item a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}
+
+/* About Page */
+.about-section {
+    padding: 5rem 0;
+}
+
+.about-image img {
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.about-features .feature-item {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.mission-vision {
+    padding: 5rem 0;
+}
+
+.mission-card, .vision-card {
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover, .vision-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.values-section {
+    padding: 5rem 0;
+}
+
+.value-card {
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Value icons artık Bootstrap fs-1 ile yönetiliyor */
+
+.team-section {
+    padding: 5rem 0;
+}
+
+.team-card {
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.certificates-section {
+    padding: 5rem 0;
+}
+
+.certificate-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+    background: white;
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.certificate-card i {
+    font-size: 3rem;
+}
+
+/* Contact Page */
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+    min-width: 50px;
+}
+
+.contact-content h5 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.form-control {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(44, 85, 48, 0.25);
+}
+
+.form-select {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.emergency-contact {
+    border-radius: 10px !important;
+}
+
+.map-section {
+    padding: 5rem 0;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.faq-section {
+    padding: 5rem 0;
+}
+
+.accordion-button {
+    background: #f8f9fa;
+    border: none;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--primary-color);
+    color: white;
+}
+
+.accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: 10px !important;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color) !important;
+    padding: 3rem 0 1rem;
+}
+
+footer h5, footer h6 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+footer .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+footer .social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: none;
+}
+
+#backToTop:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(44, 85, 48, 0.3);
+}
+
+.btn-outline-light {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: var(--accent-color);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+.btn-floating {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-item {
+        margin-bottom: 1rem;
+    }
+    
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    /* .page-title responsive styles artık gerekli değil */
+    
+    .contact-form {
+        padding: 1rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* WhatsApp Styles */
+.btn-whatsapp {
+    background: #25D366;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background: #20B658;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-nav .nav-link:hover {
+    color: #25D366 !important;
+}
+
+.whatsapp-contact {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 1px solid #25D366;
+}
+
+.whatsapp-contact .contact-icon i {
+    color: #25D366;
+}
+
+.whatsapp-contact:hover {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.2);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-float:hover {
+    background-color: #20B658;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll; /* Fixed background mobilde performans sorunu yaratabilir */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
